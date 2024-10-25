@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting - Qiita Following Likers</title>
+  <link rel="stylesheet" href="./popup.css">
+  <script src="./content.js"></script>
+  <script src="/popup.js"></script>
+</head>
+
+<body>
+  <div class="user">
+    <input type="text" class="textbox" placeholder="__MSG_userIdPlaceholder__" id="userId"/>
+    <h1>@</h1>
+    <span id="followeeCounts"></span> (<span id="followeeLastUpdatedTime"></span>)<br>
+    <span>__MSG_updateInterval__</span><input type="text" class="textbox" placeholder="__MSG_updateIntervalDefault__" id="updateInterval"/><span>__MSG_updateIntervalUnit__</span>
+    <button class="buttonBasic" id="updateFollowee">__MSG_updateFollowee__</button>
+  </div>
+
+  <div class="wrapper">
+    <div>
+      <h2>__MSG_header__</h2>
+      <form class="radio" id="header">
+        <label><input type="radio" name="header" value="none">__MSG_none__</label>
+        <label><input type="radio" name="header" value="open">__MSG_open__</label>
+        <label><input type="radio" name="header" value="closed">__MSG_closed__</label>
+      </form>
+    </div>
+    <div>
+      <h2>__MSG_footer__</h2>
+      <form class="radio" id="footer">
+        <label><input type="radio" name="footer" value="none">__MSG_none__</label>
+        <label><input type="radio" name="footer" value="open">__MSG_open__</label>
+        <label><input type="radio" name="footer" value="closed">__MSG_closed__</label>
+      </form>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div>
+      <h2>__MSG_defaultDate__</h2>
+      <form class="radio" id="defaultDate">
+        <label><input type="radio" name="defaultDate" value="simple">__MSG_simple__</label>
+        <label><input type="radio" name="defaultDate" value="detail">__MSG_detail__</label>
+      </form>
+    </div>
+  </div>
+  <br>
+  <div class="user">
+    <input type="text" class="textbox" placeholder="__MSG_apiToken__" id="apiToken"/>
+  </div>
+  <br><br>
+  <button class="buttonBasic red">
+    <label for="clearPopupFlag">__MSG_clearAll__</label>
+  </button>
+  <input type="checkbox" class="popup-flag" id="clearPopupFlag">
+  <label class="popup-background" for="clearPopupFlag"></label>
+  <div class="popup">
+    <label class="close-button" for="clearPopupFlag">×</label>
+    <div class="content">
+      <h1>__MSG_confirmTitle__</h1>
+      <h2>__MSG_confirmMessage__</h2>
+      <button class="buttonBasic red bottomButton" id="clearAllDate">
+        <label for="clearPopupFlag">__MSG_confirmYes__</label>
+      </button>
+    </div>
+  </div>
+
+</body>
+
+</html>

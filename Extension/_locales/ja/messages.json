@@ -1,0 +1,122 @@
+{
+  "extName": {
+    "message": "Qiita いいねチェッカー"
+  },
+  "extDescription": {
+    "message": "フォローしているユーザーのいいねを表示します"
+  },
+  "userIdPlaceholder": {
+    "message": "あなたのID"
+  },
+  "followee": {
+    "message": "フォロー中：$count$人",
+    "placeholders": {
+      "count": {"content": "$1"}
+    }
+  },
+  "updateInterval": {
+    "message": "更新間隔"
+  },
+  "updateIntervalDefault": {
+    "message": "12"
+  },
+  "updateIntervalUnit": {
+    "message": "時間"
+  },
+  "updateFollowee": {
+    "message": "フォロー中リストを更新"
+  },
+  "lastUpdate": {
+    "message": "最終更新：$date$",
+    "placeholders": {
+      "date": {"content": "$1"}
+    }
+  },
+  "header": {
+    "message": "記事前"
+  },
+  "footer": {
+    "message": "記事後"
+  },
+  "defaultDate": {
+    "message": "時刻のデフォルト表記"
+  },
+  "none": {
+    "message": "なし"
+  },
+  "open": {
+    "message": "開いて表示"
+  },
+  "closed": {
+    "message": "閉じて表示"
+  },
+  "simple": {
+    "message": "簡易表記 (例：54年前)"
+  },
+  "detail": {
+    "message": "詳細表記 (例：1970/1/1 00:00:00)"
+  },
+  "apiToken": {
+    "message": "APIトークン (空欄可)"
+  },
+  "clearAll": {
+    "message": "設定をクリア"
+  },
+  "confirmTitle": {
+    "message": "注意"
+  },
+  "confirmMessage": {
+    "message": "本当に設定を削除しますか？"
+  },
+  "confirmYes": {
+    "message": "確定"
+  },
+  "simplifyDateSec": {
+    "message": "$sec$秒前",
+    "placeholders": {
+      "sec": {"content": "$1"}
+    }
+  },
+  "simplifyDateMin": {
+    "message": "$min$分前",
+    "placeholders": {
+      "min": {"content": "$1"}
+    }
+  },
+  "simplifyDateHour": {
+    "message": "$hour$時間前",
+    "placeholders": {
+      "hour": {"content": "$1"}
+    }
+  },
+  "simplifyDateDay": {
+    "message": "$day$日前",
+    "placeholders": {
+      "day": {"content": "$1"}
+    }
+  },
+  "simplifyDateWeek": {
+    "message": "$week$週間前",
+    "placeholders": {
+      "week": {"content": "$1"}
+    }
+  },
+  "simplifyDateMonth": {
+    "message": "$month$ヶ月前",
+    "placeholders": {
+      "month": {"content": "$1"}
+    }
+  },
+  "simplifyDateYear": {
+    "message": "$year$年前",
+    "placeholders": {
+      "year": {"content": "$1"}
+    }
+  },
+  "summeryTitle": {
+    "message": "この記事はフォロー中の$count$人がいいねしています。",
+    "placeholders": {
+      "count": {"content": "$1"}
+    }
+  }
+}

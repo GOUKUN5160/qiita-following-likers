@@ -1,0 +1,131 @@
+{
+  "extName": {
+    "message": "Qiita Following Likers"
+  },
+  "extDescription": {
+    "message": "Show following likers"
+  },
+  "userIdPlaceholder": {
+    "message": "Your ID"
+  },
+  "followee": {
+    "message": "Followee: $count$",
+    "placeholders": {
+      "count": {"content": "$1"}
+    }
+  },
+  "updateInterval": {
+    "message": "Update interval"
+  },
+  "updateIntervalDefault": {
+    "message": "12"
+  },
+  "updateIntervalUnit": {
+    "message": "hour(s)"
+  },
+  "updateFollowee": {
+    "message": "Update followee"
+  },
+  "lastUpdate": {
+    "message": "Last update: $date$",
+    "placeholders": {
+      "date": {"content": "$1"}
+    }
+  },
+  "header": {
+    "message": "Header"
+  },
+  "footer": {
+    "message": "Footer"
+  },
+  "defaultDate": {
+    "message": "Default date format"
+  },
+  "none": {
+    "message": "None"
+  },
+  "open": {
+    "message": "Open"
+  },
+  "closed": {
+    "message": "Closed"
+  },
+  "simple": {
+    "message": "Simplified (e.g. 1d ago)"
+  },
+  "detail": {
+    "message": "Full (e.g. 2021-01-01 00:00:00)"
+  },
+  "apiToken": {
+    "message": "API Token (optional)"
+  },
+  "clearAll": {
+    "message": "Clear all settings"
+  },
+  "confirmTitle": {
+    "message": "Confirm"
+  },
+  "confirmMessage": {
+    "message": "Are you sure you want to clear all settings?"
+  },
+  "confirmYes": {
+    "message": "Yes"
+  },
+  "consoleLoadedMessage": {
+    "message": "Qiita Following Likers: extension loaded."
+  },
+  "consoleNotArticleMessage": {
+    "message": "Qiita Following Likers: articleId is not found."
+  },
+  "consoleInitSettingMessage": {
+    "message": "Qiita Following Likers: initialize settings."
+  },
+  "simplifyDateSec": {
+    "message": "$sec$s ago",
+    "placeholders": {
+      "sec": {"content": "$1"}
+    }
+  },
+  "simplifyDateMin": {
+    "message": "$min$m ago",
+    "placeholders": {
+      "min": {"content": "$1"}
+    }
+  },
+  "simplifyDateHour": {
+    "message": "$hour$h ago",
+    "placeholders": {
+      "hour": {"content": "$1"}
+    }
+  },
+  "simplifyDateDay": {
+    "message": "$day$d ago",
+    "placeholders": {
+      "day": {"content": "$1"}
+    }
+  },
+  "simplifyDateWeek": {
+    "message": "$week$ week(s) ago",
+    "placeholders": {
+      "week": {"content": "$1"}
+    }
+  },
+  "simplifyDateMonth": {
+    "message": "$month$ month(s) ago",
+    "placeholders": {
+      "month": {"content": "$1"}
+    }
+  },
+  "simplifyDateYear": {
+    "message": "$year$y ago",
+    "placeholders": {
+      "year": {"content": "$1"}
+    }
+  },
+  "summeryTitle": {
+    "message": "This article is liked by $count$ your followee.",
+    "placeholders": {
+      "count": {"content": "$1"}
+    }
+  }
+}
