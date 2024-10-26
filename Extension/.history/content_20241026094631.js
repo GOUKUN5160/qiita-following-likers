@@ -2,8 +2,9 @@ const i18n = (key, arg) => {
   return chrome.i18n.getMessage(key, arg ? String(arg) : undefined);
 };
 
-const setBadge = async (text="", color="blue") => {
-  chrome.runtime.sendMessage({ name: "setBadge", text: text, color: color });
+const setBadge = (text="", color=[255, 0, 0]) => {
+  chrome.browserAction.setBadgeText({ "text": text });
+  chrome.browserAction.setBadgeBackgroundColor({ color: color });
 };
 
 const extractArticleId = (url) => {
@@ -213,7 +214,6 @@ const insertElement = async (likers) => {
 };
 
 const init = async () => {
-  setBadge("⟳");
   const articleId = extractArticleId(window.location.href);
   if (!articleId) {
     console.log(i18n("consoleNotArticleMessage"));
@@ -221,8 +221,7 @@ const init = async () => {
   }
   const likers = await getLikers(articleId);
   if (likers.length === 0) return;
-  await insertElement(likers);
-  setBadge("");
+  insertElement(likers);
 };
 
 window.addEventListener("load", () => {

@@ -2,8 +2,9 @@ const i18n = (key, arg) => {
   return chrome.i18n.getMessage(key, arg ? String(arg) : undefined);
 };
 
-const setBadge = async (text="", color="blue") => {
-  chrome.runtime.sendMessage({ name: "setBadge", text: text, color: color });
+const setBadge = (text="", color="red") => {
+  chrome.action.setBadgeText({ "text": text });
+  chrome.action.setBadgeBackgroundColor({ color: color });
 };
 
 const extractArticleId = (url) => {
@@ -187,6 +188,7 @@ const createDisplayElement = (likerElementsString, likerCount, isOpen) => {
 };
 
 const insertElement = async (likers) => {
+  setBadge("...");
   const settings = await getSetting();
   const followees = await getFollowee(settings.userId);
   let likerElementsString = "";
@@ -210,10 +212,10 @@ const insertElement = async (likers) => {
     const articleFooter = document.querySelector("div.p-items_main > div");
     articleFooter.insertBefore(footerFollowingLikers, articleFooter.firstChild);
   }
+  setBadge("");
 };
 
 const init = async () => {
-  setBadge("⟳");
   const articleId = extractArticleId(window.location.href);
   if (!articleId) {
     console.log(i18n("consoleNotArticleMessage"));
@@ -221,8 +223,7 @@ const init = async () => {
   }
   const likers = await getLikers(articleId);
   if (likers.length === 0) return;
-  await insertElement(likers);
-  setBadge("");
+  insertElement(likers);
 };
 
 window.addEventListener("load", () => {

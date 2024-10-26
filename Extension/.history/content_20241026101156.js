@@ -214,6 +214,7 @@ const insertElement = async (likers) => {
 
 const init = async () => {
   setBadge("⟳");
+  console.log("Start getting followees");
   const articleId = extractArticleId(window.location.href);
   if (!articleId) {
     console.log(i18n("consoleNotArticleMessage"));
@@ -222,6 +223,7 @@ const init = async () => {
   const likers = await getLikers(articleId);
   if (likers.length === 0) return;
   await insertElement(likers);
+  console.log("Finish getting followees");
   setBadge("");
 };
 

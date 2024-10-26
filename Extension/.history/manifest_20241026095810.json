@@ -26,8 +26,5 @@
       "js": ["content.js"]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "default_locale": "en_US"
 }
