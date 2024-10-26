@@ -18,7 +18,7 @@
     "message": "Update interval"
   },
   "updateIntervalDefault": {
-    "message": "12"
+    "message": "1"
   },
   "updateIntervalUnit": {
     "message": "hour(s)"

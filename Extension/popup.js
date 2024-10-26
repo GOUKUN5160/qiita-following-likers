@@ -56,9 +56,9 @@ window.addEventListener("load", () => {
   updateInterval.addEventListener("blur", () => {
     updateInterval.value = updateInterval.value.replace(/[^0-9]/g, "");
     if (updateInterval.value === "") {
-      updateInterval.value = 12;
+      updateInterval.value = 1;
     }
-    chrome.storage.sync.set({ updateFolloweeIntervalHour: parseInt(updateInterval.value) || 12 });
+    chrome.storage.sync.set({ updateFolloweeIntervalHour: parseInt(updateInterval.value) || 1 });
   });
   header.addEventListener("change", () => {
     chrome.storage.sync.set({ header: header.header.value });

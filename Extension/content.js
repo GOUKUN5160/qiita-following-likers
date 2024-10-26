@@ -33,7 +33,7 @@ const initSetting = async () => {
     header: "open",
     footer: "none",
     defaultDate: "simple",
-    updateFolloweeIntervalHour: 12,
+    updateFolloweeIntervalHour: 1,
     apiToken: ""
   };
   await chrome.storage.sync.set(settings);
@@ -60,8 +60,12 @@ const getSetting = async () => {
     lastUpdateFollowee: lastUpdateFollowee,
     apiToken: apiToken
   };
-  if (!(userId != undefined && header && footer && defaultDate && updateFolloweeIntervalHour && lastUpdateFollowee && apiToken != undefined)) {
+  if (!(userId != undefined && header && footer && defaultDate && updateFolloweeIntervalHour && apiToken != undefined)) {
     settings = await initSetting();
+  }
+  if (!lastUpdateFollowee) {
+    settings.lastUpdateFollowee = new Date(0).toISOString();
+    await chrome.storage.local.set({ lastUpdateFollowee: settings.lastUpdateFollowee });
   }
   return settings;
 };
