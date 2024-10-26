@@ -217,14 +217,10 @@ const init = async () => {
   const articleId = extractArticleId(window.location.href);
   if (!articleId) {
     console.log(i18n("consoleNotArticleMessage"));
-    setBadge("");
     return;
   }
   const likers = await getLikers(articleId);
-  if (likers.length === 0) {
-    setBadge("");
-    return;
-  }
+  if (likers.length === 0) return;
   await insertElement(likers);
   setBadge("");
 };
