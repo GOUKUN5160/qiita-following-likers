@@ -144,19 +144,27 @@ const getUserElement = (userId, userImageUrl, simpleDate, detailDate, simpleFirs
 
 const getFollowers = async (user) => {
   if (!user) return [];
-  const response = await fetchApi(`https://qiita.com/api/v2/users/${user}/followers`);
-  if (response.status != 200) return [];
-  const data = await response.json();
-  return data;
+  let followers = [];
+  let response, data;
+  for (let i = 1; i <= 100; i++) {
+    response = await fetchApi(`https://qiita.com/api/v2/users/${user}/followers?page=${i}&per_page=${100}`);
+    if (response.status != 200) return [];
+    data = await response.json();
+    followers = followers.concat(data);
+    if (data.length < 100) break;
+  }
+  return followers;
+
 };
 
 const getLikers = async (articleId) => {
   if (!articleId) return [];
   let likers = [];
+  let response, data;
   for (let i = 1; i <= 100; i++) {
-    const response = await fetchApi(`https://qiita.com/api/v2/items/${articleId}/likes?page=${i}&per_page=${100}`);
+    response = await fetchApi(`https://qiita.com/api/v2/items/${articleId}/likes?page=${i}&per_page=${100}`);
     if (response.status != 200) return [];
-    const data = await response.json();
+    data = await response.json();
     likers = likers.concat(data);
     if (data.length < 100) break;
   }
