@@ -157,8 +157,8 @@ const getLikers = async (articleId) => {
     const response = await fetchApi(`https://qiita.com/api/v2/items/${articleId}/likes?page=${i}&per_page=${100}`);
     if (response.status != 200) return [];
     const data = await response.json();
-    if (data.length === 0) break;
     likers = likers.concat(data);
+    if (data.length < 100) break;
   }
   return likers;
 };
