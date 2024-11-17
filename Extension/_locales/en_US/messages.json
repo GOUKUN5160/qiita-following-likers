@@ -68,6 +68,9 @@
   "confirmMessage": {
     "message": "Are you sure you want to clear all settings?"
   },
+  "confirmDescription": {
+    "message": "They will be removed from all synced devices."
+  },
   "confirmYes": {
     "message": "Yes"
   },

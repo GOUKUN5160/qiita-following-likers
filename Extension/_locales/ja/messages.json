@@ -68,6 +68,9 @@
   "confirmMessage": {
     "message": "本当に設定を削除しますか？"
   },
+  "confirmDescription": {
+    "message": "同期されている全ての端末から削除されます。"
+  },
   "confirmYes": {
     "message": "確定"
   },
