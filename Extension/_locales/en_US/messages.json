@@ -54,7 +54,7 @@
     "message": "Simplified (e.g. 1d ago)"
   },
   "detail": {
-    "message": "Full (e.g. 2021-01-01 00:00:00)"
+    "message": "Full (e.g. 01/01/2021 00:00:00, AM)"
   },
   "apiToken": {
     "message": "API Token (optional)"
